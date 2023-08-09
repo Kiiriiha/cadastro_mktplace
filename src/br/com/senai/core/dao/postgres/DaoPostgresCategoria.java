@@ -19,6 +19,7 @@ public class DaoPostgresCategoria implements DaoCategoria {
 	private final String SELECT_BY_NOME = "SELECT id, nome FROM categorias WHERE Upper(nome) LIKE Upper(?) order by nome";
 	private final String SELECT_TODOS = "SELECT id, nome FROM categorias order by nome";
 	
+	
 	private Connection conexao;
 	
 	public DaoPostgresCategoria () {

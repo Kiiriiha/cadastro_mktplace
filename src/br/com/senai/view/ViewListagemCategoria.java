@@ -154,6 +154,8 @@ public class ViewListagemCategoria extends JFrame {
 				}
 				
 			}
+			
+			
 		});
 		btnEditar.setBounds(362, 328, 98, 26);
 		contentPane.add(btnEditar);
@@ -161,5 +163,17 @@ public class ViewListagemCategoria extends JFrame {
 		
 		
 		setLocationRelativeTo(null);
+	}
+	
+	private void configurarColuna(int indice, int largura) {
+		this.tableCategorias.getColumnModel().getColumn(indice).setResizable(true);
+		this.tableCategorias.getColumnModel().getColumn(indice).setPreferredWidth(largura);
+	}
+	
+	private void configurarTabela() {
+		final int COLUNA_ID = 0;
+		final int COLUNA_NOME = 1;
+		this.tableCategorias.getTableHeader().setReorderingAllowed(false);
+		this.tableCategorias.getSelectionModel().setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 	}
 }
